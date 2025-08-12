@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yash Jayprakash Patil — Portfolio</title>
+  <style>
+    :root{
+      --accent:#0ea5a4;
+      --bg:#f7fbfb;
+      --card:#ffffff;
+      --muted:#666;
+      --radius:12px;
+      --maxw:900px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:#111;
+      line-height:1.5;
+    }
+    .container{
+      max-width:var(--maxw);
+      margin:28px auto;
+      padding:18px;
+    }
+    header{
+      background:linear-gradient(90deg,var(--accent),#06b6d4);
+      color:white;
+      padding:28px;
+      border-radius:var(--radius);
+      box-shadow:0 6px 18px rgba(2,6,23,0.08);
+      text-align:center;
+    }
+    header h1{margin:0;font-size:1.8rem;letter-spacing:0.5px}
+    header p{margin:6px 0 0;font-weight:600;opacity:0.95}
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:18px;
+      margin-top:18px;
+    }
+    @media (max-width:880px){ .grid{grid-template-columns:1fr;} }
+    .card{
+      background:var(--card);
+      padding:16px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(2,6,23,0.06);
+    }
+    h2{margin:0 0 10px;font-size:1.1rem;color:#0f172a}
+    .about p{margin:0 0 8px;color:var(--muted)}
+    .skills{display:flex;flex-wrap:wrap}
+    .skill{
+      background:#eefafa;
+      color:#035556;
+      padding:6px 10px;
+      margin:6px 8px 6px 0;
+      border-radius:8px;
+      font-weight:600;
+      font-size:0.95rem;
+    }
+    .projects .proj{
+      border-left:4px solid rgba(14,165,164,0.15);
+      padding:12px;
+      margin:10px 0;
+      border-radius:8px;
+      background:linear-gradient(180deg,#ffffff,#fbffff);
+    }
+    .contact-list p{margin:8px 0;font-weight:600}
+    .contact-list a{color:var(--accent);text-decoration:none}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:0.9rem}
+    .small{font-size:0.95rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Yash Jayprakash Patil</h1>
+      <p>Data Analyst</p>
+    </header>
+
+    <div class="grid">
+      <!-- Left column -->
+      <div>
+        <div class="card about">
+          <h2>About Me</h2>
+          <p class="small">Hi — I'm Yash, a Data Analyst focused on turning raw data into clear insights. I work with SQL, Power BI, Excel and Python to build dashboards and models that help teams make better decisions.</p>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2>Skills</h2>
+          <div class="skills">
+            <div class="skill">SQL</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Excel</div>
+            <div class="skill">Python</div>
+            <div class="skill">Data Cleaning</div>
+            <div class="skill">Data Visualization</div>
+          </div>
+        </div>
+
+        <div class="card projects" style="margin-top:12px">
+          <h2>Projects</h2>
+
+          <div class="proj">
+            <strong>SHEIN E-commerce Sales Dashboard</strong>
+            <p class="small">Interactive Power BI dashboard analyzing sales, discounts, and category trends. (Kaggle dataset combination & visual analysis)</p>
+          </div>
+
+          <div class="proj">
+            <strong>House Price Prediction</strong>
+            <p class="small">Machine learning model built with Python (scikit-learn) to predict house prices after feature engineering and validation.</p>
+          </div>
+
+          <!-- Add more projects by editing this file -->
+        </div>
+      </div>
+
+      <!-- Right column -->
+      <aside>
+        <div class="card contact">
+          <h2>Contact</h2>
+          <div class="contact-list">
+            <p>📍 Palghar, Maharashtra, India</p>
+
+            <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/yash-jayprakash-patil-9621b32b6/?originalSubdomain=in" target="_blank" rel="noopener">Yash Jayprakash Patil</a></p>
+
+            <p>💻 GitHub: <a href="https://github.com/yourgithub" target="_blank" id="githubLink">github.com/yourgithub</a></p>
+
+            <p>✉️ Email: <a href="mailto:your.email@example.com" id="emailLink">your.email@example.com</a></p>
+
+            <p>📞 Phone: <a href="tel:+918080620796" id="phoneLink">+91 80806 20796</a></p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2>Quick Info</h2>
+          <p class="small">Available for internships / full-time roles in data analysis. Open to remote & hybrid opportunities.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>© <span id="year"></span> Yash Jayprakash Patil · Built with ❤️</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
