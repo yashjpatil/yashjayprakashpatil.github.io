@@ -36,31 +36,39 @@
     }
     header h1{margin:0;font-size:1.8rem;letter-spacing:0.5px}
     header p{margin:6px 0 0;font-weight:600;opacity:0.95}
+
     .grid{
       display:grid;
-      grid-template-columns:1fr 320px;
+      grid-template-columns:1fr 350px;
       gap:18px;
       margin-top:18px;
     }
     @media (max-width:880px){ .grid{grid-template-columns:1fr;} }
+
     .card{
       background:var(--card);
       padding:16px;
-      border-radius:12px;
+      border-radius:var(--radius);
       box-shadow:0 6px 18px rgba(2,6,23,0.06);
+      margin-bottom:16px;
     }
-    h2{margin:0 0 10px;font-size:1.1rem;color:#0f172a}
+    h2{margin:0 0 12px;font-size:1.2rem;color:#0f172a}
     .about p{margin:0 0 8px;color:var(--muted)}
-    .skills{display:flex;flex-wrap:wrap}
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+    }
     .skill{
       background:#eefafa;
       color:#035556;
-      padding:6px 10px;
-      margin:6px 8px 6px 0;
+      padding:6px 12px;
       border-radius:8px;
       font-weight:600;
       font-size:0.95rem;
     }
+
     .projects .proj{
       border-left:4px solid rgba(14,165,164,0.15);
       padding:12px;
@@ -68,10 +76,11 @@
       border-radius:8px;
       background:linear-gradient(180deg,#ffffff,#fbffff);
     }
-    .contact-list p{margin:8px 0;font-weight:600}
+    .contact-list p{margin:6px 0;font-weight:600}
     .contact-list a{color:var(--accent);text-decoration:none}
-    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:0.9rem}
+
     .small{font-size:0.95rem;color:var(--muted)}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.9rem}
   </style>
 </head>
 <body>
@@ -84,60 +93,152 @@
     <div class="grid">
       <!-- Left column -->
       <div>
+        <!-- About Me -->
         <div class="card about">
           <h2>About Me</h2>
-          <p class="small">Hi — I'm Yash, a Data Analyst focused on turning raw data into clear insights. I work with SQL, Power BI, Excel and Python to build dashboards and models that help teams make better decisions.</p>
+          <p class="small">
+            Hi, I’m Yash, a B.Sc. Data Science graduate (2025) from Mumbai University. I have hands-on experience with SQL, Python, Power BI, and Excel, and have built my own projects analyzing datasets and creating dashboards. Passionate about data-driven decision-making, I am eager to start my career as a Data Analyst and contribute effectively to a professional team.
+          </p>
         </div>
 
-        <div class="card" style="margin-top:12px">
+        <!-- Skills -->
+        <div class="card">
           <h2>Skills</h2>
           <div class="skills">
             <div class="skill">SQL</div>
             <div class="skill">Power BI</div>
             <div class="skill">Excel</div>
             <div class="skill">Python</div>
+            <div class="skill">EDA</div>
             <div class="skill">Data Cleaning</div>
             <div class="skill">Data Visualization</div>
           </div>
         </div>
 
-        <div class="card projects" style="margin-top:12px">
+        <!-- Virtual Internship -->
+        <div class="card">
+          <h2>Virtual Internship</h2>
+          <div class="proj">
+            <strong>Tata Data Visualization: Empowering Business with Effective Insights | Simulation on Forage – June 2025</strong>
+            <p class="small">• Completed a simulation involving creating data visualizations for Tata Consultancy Services.</p>
+            <p class="small">• Prepared questions for a meeting with client senior leadership.</p>
+            <p class="small">• Created visuals for data analysis to help executives with effective decision-making.</p>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="card projects">
           <h2>Projects</h2>
-
+          <!-- Python + SQL + Power BI -->
           <div class="proj">
-            <strong>SHEIN E-commerce Sales Dashboard</strong>
-            <p class="small">Interactive Power BI dashboard analyzing sales, discounts, and category trends. (Kaggle dataset combination & visual analysis)</p>
+            <strong>Vendor Performance Analysis – Retail Inventory & Sales</strong>
+            <p class="small">Analyzed vendor efficiency and profitability using SQL, Python, and Power BI to support strategic purchasing and inventory decisions.</p>
+            <p class="small">🔗 <a href="https://github.com/yashjpatil/Vendor-Performance-Analysis-Retail-inventory-Sales-SQL-Pyton-Powerbi" target="_blank">View on GitHub</a></p>
           </div>
-
+          <!-- Excel -->
           <div class="proj">
-            <strong>House Price Prediction</strong>
-            <p class="small">Machine learning model built with Python (scikit-learn) to predict house prices after feature engineering and validation.</p>
+            <strong>Sales Data Analysis (Excel)</strong>
+            <p class="small">Performed in-depth sales data analysis in Excel, creating dashboards and insights to optimize business decisions.</p>
+            <p class="small">🔗 <a href="https://github.com/yashjpatil/Sales-Data-Analysis-Excel" target="_blank">View on GitHub</a></p>
           </div>
-
-          <!-- Add more projects by editing this file -->
+          <!-- Python Projects -->
+          <div class="proj">
+            <strong>Hotel Booking Data Analysis (Python)</strong>
+            <p class="small">Conducted data analysis on hotel booking datasets to derive actionable insights using Python and visualization libraries.</p>
+            <p class="small">🔗 <a href="https://github.com/yashjpatil/Hotel-Booking-Data-Analysis-Python" target="_blank">View on GitHub</a></p>
+          </div>
+          <div class="proj">
+            <strong>Shein E-commerce Data Analysis</strong>
+            <p class="small">Analyzed SHEIN e-commerce dataset to study sales trends, customer behavior, and inventory performance using Python.</p>
+            <p class="small">🔗 <a href="https://github.com/yashjpatil/Ecommerce-shein-analysis_data-analyst_project" target="_blank">View on GitHub</a></p>
+          </div>
+          <!-- SQL Projects -->
+          <div class="proj">
+            <strong>Olist Brazilian E-commerce Analysis</strong>
+            <p class="small">Performed SQL-based analysis on Brazilian e-commerce datasets to evaluate sales performance and customer metrics.</p>
+            <p class="small">🔗 <a href="https://github.com/yashjpatil/Olist-Brazilian-E-commerce-Analysis-SQL" target="_blank">View on GitHub</a></p>
+          </div>
+          <div class="proj">
+            <strong>Superstore MySQL Analysis</strong>
+            <p class="small">Analyzed Superstore sales data using MySQL queries to generate key business insights and performance metrics.</p>
+            <p class="small">🔗 <a href="https://github.com/yashjpatil/superstore-mysql-analysis" target="_blank">View on GitHub</a></p>
+          </div>
+          <!-- Power BI Projects -->
+          <div class="proj">
+            <strong>Amazon Reviews Analysis (Power BI)</strong>
+            <p class="small">Built interactive Power BI dashboards to analyze Amazon product reviews and customer sentiments.</p>
+            <p class="small">🔗 <a href="https://github.com/yashjpatil/Amazon_Reviews_Analysis_Power_bi_project" target="_blank">View on GitHub</a></p>
+          </div>
+          <div class="proj">
+            <strong>Shein E-commerce Power BI Project</strong>
+            <p class="small">Created Power BI dashboards to visualize sales and inventory trends for SHEIN e-commerce data.</p>
+            <p class="small">🔗 <a href="https://github.com/yashjpatil/Shein_E-commerce_Power-bi_project" target="_blank">View on GitHub</a></p>
+          </div>
+          <div class="proj">
+            <strong>Superstore Sales Dashboard (Power BI)</strong>
+            <p class="small">Developed a comprehensive sales dashboard in Power BI to monitor store performance and sales trends.</p>
+            <p class="small">🔗 <a href="https://github.com/yashjpatil/Superstore-sales-dashboard-powerbi" target="_blank">View on GitHub</a></p>
+          </div>
         </div>
       </div>
 
       <!-- Right column -->
       <aside>
+        <!-- Contact -->
         <div class="card contact">
           <h2>Contact</h2>
           <div class="contact-list">
             <p>📍 Palghar, Maharashtra, India</p>
-
-            <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/yash-jayprakash-patil-9621b32b6/?originalSubdomain=in" target="_blank" rel="noopener">Yash Jayprakash Patil</a></p>
-
-            <p>💻 GitHub: <a href="https://github.com/yourgithub" target="_blank" id="githubLink">github.com/yourgithub</a></p>
-
-            <p>✉️ Email: <a href="mailto:your.email@example.com" id="emailLink">your.email@example.com</a></p>
-
-            <p>📞 Phone: <a href="tel:+918080620796" id="phoneLink">+91 80806 20796</a></p>
+            <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/yash-patil-9621b32b6/" target="_blank">Yash Jayprakash Patil</a></p>
+            <p>💻 GitHub: <a href="https://github.com/yashjpatil" target="_blank">github.com/yashjpatil</a></p>
+            <p>📸 Instagram: <a href="https://www.instagram.com/patil_official29/" target="_blank">patil_official29</a></p>
+            <p>✉️ Email: <a href="mailto:patilyash.j2222@gmail.com">patilyash.j2222@gmail.com</a></p>
+            <p>📞 Phone: <a href="tel:+918080620796">+91 80806 20796</a></p>
           </div>
         </div>
 
-        <div class="card" style="margin-top:12px">
+        <!-- Quick Info -->
+        <div class="card">
           <h2>Quick Info</h2>
-          <p class="small">Available for internships / full-time roles in data analysis. Open to remote & hybrid opportunities.</p>
+          <p class="small">B.Sc. Data Science (2025) graduate with hands-on experience in SQL, Python, Power BI, Excel, and EDA. Completed personal projects and virtual internships. Seeking internships or full-time opportunities as a Data Analyst. Open to remote or hybrid roles.</p>
+        </div>
+
+        <!-- Education -->
+        <div class="card">
+          <h2>Education</h2>
+          <p class="small">
+            B.Sc. Data Science (2025)<br>
+            Wada College of Management & Science, Mumbai University<br>
+            CGPA: 8.78/10
+          </p>
+        </div>
+
+        <!-- Certifications -->
+        <div class="card">
+          <h2>Certifications</h2>
+          <p class="small">
+            • Advanced Excel Certification – Smart Skill Computer Education, Manor (Aug 2024)<br>
+            • Introduction to Data Analytics – Simplilearn (Feb 2025)<br>
+            • Power BI Workshop – Office Master (Jul 2025)
+          </p>
+        </div>
+
+        <!-- Languages / Tools -->
+        <div class="card">
+          <h2>Languages / Tools</h2>
+          <div class="skills">
+            <div class="skill">Python (numpy,pandas,matplotlib,seaborn)</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Excel</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">EDA</div>
+          </div>
+        </div>
+
+        <!-- Hobbies / Interests -->
+        <div class="card">
+          <h2>Hobbies / Interests</h2>
+          <p class="small">Data Visualization, Problem Solving, Analytics Challenges</p>
         </div>
       </aside>
     </div>
